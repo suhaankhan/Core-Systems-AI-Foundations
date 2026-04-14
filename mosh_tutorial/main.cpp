@@ -1,6 +1,11 @@
 #include <iostream>
 
 int main() {
-    std::cout << "Hello World" << std::endl;
+    int a=1;
+    int b=2;
+    int box=a;
+    a=b;
+    b=box;
+    std::cout << b << std::endl;
     return 0;
 }
