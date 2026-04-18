@@ -1,8 +1,9 @@
 #include "log.h"
 #include "math.h"
+#include "temp.h"
 
 int main() {
-    initLog();
+    /*   initLog();
     log("testing the modular header setup");
 
     int a1 = 5;
@@ -11,7 +12,9 @@ int main() {
 
     log("math and variables are working");
 
-    multiply();
-    
+    multiply();   */
+
+    toCelsius();
+
     return 0;
 }
