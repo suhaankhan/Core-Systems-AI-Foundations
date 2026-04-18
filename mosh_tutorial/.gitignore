@@ -4,4 +4,4 @@ main
 *.out
 
 # Ignore VS Code settings
-.vscode/
+.vscode/main
