@@ -3,6 +3,7 @@
 
 void toCelsius() {
     double fahrenheit;
+
     std::cout << "Enter Fahrenheit : ";
     std::cin >> fahrenheit;
 
