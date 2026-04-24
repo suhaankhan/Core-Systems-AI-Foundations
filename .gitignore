@@ -1,1 +1,4 @@
-day1
+*.exe
+*.out
+.vscode/
+node_modules/
