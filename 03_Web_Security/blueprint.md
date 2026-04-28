@@ -56,3 +56,11 @@ Use these to track your progress within a note.
 - [x] Finished Video
 - [ ] Practiced with `curl`
 - [ ] Pushed to GitHub
+
+---
+
+## 8. Visual Assets (Screenshots)
+> **Goal**: Supplement complex logic with visual evidence.
+* **Storage**: All images MUST be saved in `./assets/` within the current module folder.
+* **Naming**: Use kebab-case for files (e.g., `vid1-request-structure.png`).
+* **Syntax**: `![Alt Text](./assets/filename.png)`
