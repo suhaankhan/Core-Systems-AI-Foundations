@@ -20,6 +20,7 @@ void swap_reference(int &x, int &y) { // Reference is nothing but alias
 
 int main () {
     // Pass By Value
+    // We should use Pass by Value, when the function is required to return some result.
     int a1 = 10; // Actual Parameters
     int b1 = 20;
     swap_value(a1, b1); // Only the formal parameters get modified
