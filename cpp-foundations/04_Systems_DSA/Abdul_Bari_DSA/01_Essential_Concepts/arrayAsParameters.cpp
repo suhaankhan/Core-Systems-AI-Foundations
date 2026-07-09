@@ -5,6 +5,11 @@
 void print_array(int A[], int size) {
     // A[0] = 100; // Un-commenting this would modify the original array in main!
     
+    // CRUCIAL SYSTEM DETAIL:
+    // Proving why we MUST pass 'size' explicitly. sizeof(A) here only gives the pointer size!
+    std::cout << "--- Sizeof Proof Inside Function ---" << "\n";
+    std::cout << "sizeof(A) inside function: " << sizeof(A) << " bytes (Size of an 8-byte pointer)" << "\n\n";
+
     std::cout << "--- Printing Array Elements ---" << "\n";
     for(int i = 0; i < size; i++) {
         std::cout << A[i] << "\n";
@@ -28,6 +33,9 @@ int main() {
     // 1. Passing a Stack-allocated array to a function
     int arr[] = {2, 4, 6, 8, 10};
     int n = 5;
+
+    std::cout << "--- Sizeof Proof Inside main ---" << "\n";
+    std::cout << "sizeof(arr) inside main: " << sizeof(arr) << " bytes (5 ints * 4 bytes = 20 bytes)" << "\n\n";
     
     print_array(arr, n);
     
