@@ -5,6 +5,12 @@ struct rectangle {
     int breadth;
 };
 
+// Struct wrapping an array to prove pass-by-value deep copying
+struct test_struct {
+    int A[5];
+    int n;
+};
+
 // 1. Pass by Value - Creates a duplicate on the Stack. Original remains untouched.
 void change_length_value(rectangle r) {
     r.length = 99; // Only changes the local copy inside this stack frame
@@ -24,6 +30,11 @@ void change_length_address(rectangle *p) {
 rectangle* create_rectangle() {
     rectangle *p_heap = new rectangle{15, 30}; // Allocating right on the Heap
     return p_heap;
+}
+
+// Modifies an array inside a struct passed by value (should fail to change main)
+void manipulate_internal_array(test_struct t) {
+    t.A[0] = 999; // Modifies the stack copy array, not main's array!
 }
 
 int main() {
@@ -56,6 +67,13 @@ int main() {
     // Always clean up heap space to prevent leaks!
     delete my_heap_rect;
     my_heap_rect = nullptr;
+
+    // --- Deeper Mechanical Check: Array Inside Struct ---
+    test_struct ts = {{2, 4, 6, 8, 10}, 5};
+    manipulate_internal_array(ts);
+    
+    std::cout << "--- Array Inside Struct Pass by Value Proof ---" << "\n";
+    std::cout << "ts.A[0]: " << ts.A[0] << " (Remains 2 because whole array was deep copied to stack)" << "\n";
 
     return 0;
 }
