@@ -1,0 +1,33 @@
+# C/C++ builds & binaries
+*.o
+*.a
+*.so
+*.dylib
+*.dll
+*.exe
+*.out
+*.app
+main
+a.out
+
+# CS:APP lab outputs
+/csapp-deep-dives/**/bits
+/csapp-deep-dives/**/fshow
+/csapp-deep-dives/**/ishow
+
+# Go test / profiling artifacts
+*.test
+*.prof
+
+# Dependencies & IDE stuff
+node_modules/
+.vscode/
+.idea/
+
+# OS junk & logs
+*.log
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
